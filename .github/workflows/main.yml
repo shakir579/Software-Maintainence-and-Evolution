@@ -1,0 +1,56 @@
+name: CI
+on:
+  push:
+  pull_request:
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: Tests
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache/files
+          key: dependencies-composer-${{ hashFiles('composer.json') }}
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
+          coverage: none
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-suggest
+      - name: Copy .env
+        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+      - name: Install Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+      - name: Generate key
+        run: php artisan key:generate
+      - name: Clear config
+        run: php artisan config:clear
+      - name: Create Database
+        run: |
+          mkdir -p database
+          touch SME  
+      - name: Install NPM dependencies
+        run: npm install
+      - name: Compile backend assets
+        run: npm run backend-prod
+      - name: Compile frontend assets
+        run: npm run frontend-prod
+      - name: Clear Route  
+        run: php artisan route:clear
+      - name: Execute tests (Unit and Feature tests) via PHPUnit
+        env:
+          DB_CONNECTION: mysql
+          DB_DATABASE: smet
+          LOG_SLACK_WEBHOOK_URL: Link webhook slack 
+        run: vendor/bin/phpunit --verbose
+      - name: Deploy
+        if: github.ref == 'refs/heads/master'
+        run: curl ${{ secrets.ENVOYER_HOOK }}?sha=${{ github.sha }}
+
+
+  
