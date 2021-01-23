@@ -48,7 +48,7 @@
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="nick_name">Nick Name <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="This name is use in notification sms."></i></label>
                                         <input type="text" class="form-control" name="nick_name" placeholder="name for send sms" value="@if($student){{ $student->nick_name }}@else{{old('nick_name')}}@endif" minlength="2" maxlength="50">
@@ -56,7 +56,7 @@
                                         <span class="text-danger">{{ $errors->first('nick_name') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="dob">Date of birth<span class="text-danger">*</span></label>
                                         <input type='text' class="form-control date_picker2"  readonly name="dob" placeholder="date" value="@if($student){{ $student->dob }}@else{{old('dob')}}@endif" required minlength="10" maxlength="255" />
@@ -64,7 +64,10 @@
                                         <span class="text-danger">{{ $errors->first('dob') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                            </div> 
+
+                            <div class="row">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="gender">Gender<span class="text-danger">*</span>
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select gender type"></i>
@@ -75,10 +78,7 @@
                                         <span class="text-danger">{{ $errors->first('gender') }}</span>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="religion">Religion<span class="text-danger">*</span>
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select religion type"></i>
@@ -88,7 +88,7 @@
                                         <span class="text-danger">{{ $errors->first('religion') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="blood_group">Blood Group
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select blood group type"></i>
@@ -98,7 +98,10 @@
                                         <span class="text-danger">{{ $errors->first('blood_group') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                            </div>
+
+                            <div class="row">    
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="nationality">Nationality<span class="text-danger">*</span>
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select nationality"></i>
@@ -108,7 +111,7 @@
                                         <span class="text-danger">{{ $errors->first('nationality') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="nationality">Nationality</label>
                                         <input  type="text" class="form-control" name="nationality_other" @if(!$student || $student->nationality == "Bangladeshi") readonly @endif placeholder="Nationality" value="@if($student && $student->nationality != "Bangladeshi"){{$student->nationality}}@else{{old('nationality')}}@endif" maxlength="50" >
@@ -116,8 +119,6 @@
                                         <span class="text-danger">{{ $errors->first('nationality_other') }}</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="photo">Photo<span class="text-danger">[min 150 X 150 size and max 200kb]</span></label>
@@ -129,6 +130,9 @@
                                         <span class="text-danger">{{ $errors->first('photo') }}</span>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="email">Email</label>
@@ -146,6 +150,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group has-feedback">
@@ -242,7 +247,7 @@
                             </div>
                             <p class="lead section-title">Academic Info:</p>
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="regi_no">Registration No.
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="will auto generate after saving the form"></i>
@@ -253,7 +258,7 @@
                                     </div>
                                 </div>
                                 @if(AppHelper::getInstituteCategory() == 'college')
-                                    <div class="col-md-2">
+                                    <div class="col-md-4">
                                         <div class="form-group has-feedback">
                                             <label for="academic_year">Academic Year
                                                 <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Set academic year"></i>
@@ -268,7 +273,7 @@
                                         </div>
                                     </div>
                                 @endif
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="class_id">Class Name
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Set class that student belongs to"></i>
@@ -284,8 +289,8 @@
                                         @endif
 
                                     </div>
-                                </div>
-                                <div class="col-md-3">
+                                </div> 
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="section_id">Section
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Set section that student belongs to"></i>
@@ -296,7 +301,10 @@
                                         <span class="text-danger">{{ $errors->first('section_id') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                </div>
+
+                            <div class="row">  
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="shift">Shift
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Set class shift"></i>
@@ -306,11 +314,7 @@
                                         <span class="text-danger">{{ $errors->first('shift') }}</span>
                                     </div>
                                 </div>
-
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="card_no">ID Card No.</label>
                                         <input  type="text" class="form-control" name="card_no"  placeholder="id card number" value="@if($regiInfo){{$regiInfo->card_no}}@else{{old('card_no')}}@endif"  min="4" maxlength="50">
@@ -318,7 +322,7 @@
                                         <span class="text-danger">{{ $errors->first('card_no') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="roll_no">Roll No.</label>
                                         <input  type="number" class="form-control" name="roll_no"  placeholder="roll number" value="@if($regiInfo){{$regiInfo->roll_no}}@else{{old('roll_no')}}@endif"  maxlength="20">
@@ -326,7 +330,10 @@
                                         <span class="text-danger">{{ $errors->first('roll_no') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                            </div>
+
+                            <div class="row">  
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="board_regi_no">Board Registration No.</label>
                                         <input  type="text" class="form-control" name="board_regi_no"  placeholder="registration number" value="@if($regiInfo){{$regiInfo->board_regi_no}}@else{{old('board_regi_no')}}@endif"  maxlength="20">
@@ -334,7 +341,7 @@
                                         <span class="text-danger">{{ $errors->first('board_regi_no') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="sms_receive_no">Notification SMS No.<span class="text-danger">*</span>
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Which phone number will receive notification sms?"></i>
@@ -345,7 +352,7 @@
                                         <span class="text-danger">{{ $errors->first('sms_receive_no') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="siblings">Siblings
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Siblings student Registration No. If more than one then use ',' as a seperator."></i>
@@ -356,7 +363,7 @@
                                     </div>
                                 </div>
                                 @if(count($houseList))
-                                    <div class="col-md-2">
+                                    <div class="col-md-4">
                                         <div class="form-group has-feedback">
                                             <label for="house">House Name
                                                 <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="if student group by its hostel name"></i>
