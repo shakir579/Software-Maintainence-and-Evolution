@@ -58,7 +58,7 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: app-sme #Must be unique in Heroku
-          heroku_email: yazmin5204@gmail.com
+          heroku_email: sharkaizat579@gmail.com
 
 
   
