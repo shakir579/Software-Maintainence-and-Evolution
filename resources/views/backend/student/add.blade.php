@@ -48,7 +48,7 @@
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="nick_name">Nick Name <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="This name is use in notification sms."></i></label>
                                         <input type="text" class="form-control" name="nick_name" placeholder="name for send sms" value="@if($student){{ $student->nick_name }}@else{{old('nick_name')}}@endif" minlength="2" maxlength="50">
@@ -56,7 +56,7 @@
                                         <span class="text-danger">{{ $errors->first('nick_name') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="dob">Date of birth<span class="text-danger">*</span></label>
                                         <input type='text' class="form-control date_picker2"  readonly name="dob" placeholder="date" value="@if($student){{ $student->dob }}@else{{old('dob')}}@endif" required minlength="10" maxlength="255" />
@@ -64,7 +64,10 @@
                                         <span class="text-danger">{{ $errors->first('dob') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                            </div> 
+
+                            <div class="row">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="gender">Gender<span class="text-danger">*</span>
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select gender type"></i>
@@ -75,10 +78,7 @@
                                         <span class="text-danger">{{ $errors->first('gender') }}</span>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="religion">Religion<span class="text-danger">*</span>
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select religion type"></i>
@@ -88,7 +88,7 @@
                                         <span class="text-danger">{{ $errors->first('religion') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="blood_group">Blood Group
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select blood group type"></i>
@@ -98,7 +98,10 @@
                                         <span class="text-danger">{{ $errors->first('blood_group') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                            </div>
+
+                            <div class="row">    
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="nationality">Nationality<span class="text-danger">*</span>
                                             <i class="fa fa-question-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="select nationality"></i>
@@ -108,7 +111,7 @@
                                         <span class="text-danger">{{ $errors->first('nationality') }}</span>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="nationality">Nationality</label>
                                         <input  type="text" class="form-control" name="nationality_other" @if(!$student || $student->nationality == "Bangladeshi") readonly @endif placeholder="Nationality" value="@if($student && $student->nationality != "Bangladeshi"){{$student->nationality}}@else{{old('nationality')}}@endif" maxlength="50" >
@@ -116,8 +119,6 @@
                                         <span class="text-danger">{{ $errors->first('nationality_other') }}</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="photo">Photo<span class="text-danger">[min 150 X 150 size and max 200kb]</span></label>
@@ -129,6 +130,9 @@
                                         <span class="text-danger">{{ $errors->first('photo') }}</span>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group has-feedback">
                                         <label for="email">Email</label>
@@ -146,6 +150,7 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group has-feedback">
