@@ -103,7 +103,7 @@
                                     <th width="10%">Roll No.</th>
                                     <th width="15%">In Time</th>
                                     <th width="15%">Out Time</th>
-                                    <th width="5%">Working Hours</th>
+                                    <th width="5%">Staying Hours</th>
                                     <th width="20%">Status</th>
                                 </tr>
                                 </tfoot>
