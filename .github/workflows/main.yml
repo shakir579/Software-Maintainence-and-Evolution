@@ -20,14 +20,14 @@ jobs:
           php-version: 7.3
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
           coverage: none
+      - name: Update Composer 
+        run: composer update
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-suggest
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
-      - name: Update Composer 
-        run: composer update
       - name: Generate key
         run: php artisan key:generate
       - name: Clear config
