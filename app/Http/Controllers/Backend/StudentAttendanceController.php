@@ -131,6 +131,7 @@ class StudentAttendanceController extends Controller
         $students = collect();
         $academic_year = '';
         $class_name = '';
+        $sections  = [];
         $section_name = '';
         $academic_years = [];
         $attendance_date = date('d/m/Y');
@@ -169,6 +170,9 @@ class StudentAttendanceController extends Controller
                 ->where('id', $class_id)
                 ->first();
             $class_name = $classInfo->name;
+            $sections = Section::where('status', AppHelper::ACTIVE)
+            ->where('class_id', $class_id)
+            ->pluck('name', 'id');
             $sectionsInfo = Section::where('status', AppHelper::ACTIVE)
                 ->where('id', $section_id)
                 ->where('class_id', $class_id)
