@@ -20,8 +20,6 @@ jobs:
           php-version: 7.3
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite
           coverage: none
-      - name: Update Composer 
-        run: composer update
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-interaction --no-suggest
       - name: Copy .env
