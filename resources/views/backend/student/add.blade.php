@@ -433,7 +433,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group has-feedback">
-                                            <label for="password">Passwrod</label>
+                                            <label for="password">Password</label>
                                             <input type="password" class="form-control" name="password" placeholder="leave blank if not need to create user"  minlength="6" maxlength="50">
                                             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                                             <span class="text-danger">{{ $errors->first('password') }}</span>
