@@ -93,19 +93,6 @@
                             @endforeach
 
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <th width="5%">#</th>
-                                <th class="notexport" width="10%">Photo</th>
-                                <th width="8%">ID Card</th>
-                                <th width="24%">Name</th>
-                                <th width="8%">Phone No</th>
-                                <th width="15%">Email</th>
-                                <th width="5%">Order</th>
-                                <th width="10%">Status</th>
-                                <th class="notexport" width="15%">Action</th>
-                            </tr>
-                            </tfoot>
                         </table>
                     </div>
                     </div>

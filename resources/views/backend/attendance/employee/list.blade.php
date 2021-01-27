@@ -83,18 +83,7 @@
                                 @endforeach
 
                                 </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th width="5%">#</th>
-                                    <th width="25%">Name</th>
-                                    <th width="10%">Card. No.</th>
-                                    <th width="10%">Designation</th>
-                                    <th width="15%">In Time</th>
-                                    <th width="15%">Out Time</th>
-                                    <th width="5%">Working Hours</th>
-                                    <th width="15%">Status</th>
-                                </tr>
-                                </tfoot>
+
                             </table>
                         </div>
                     </div>

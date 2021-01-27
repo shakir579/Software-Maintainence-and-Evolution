@@ -93,18 +93,7 @@
                             @endforeach
 
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <th width="5%">#</th>
-                                <th width="20%">Name</th>
-                                <th width="8%">Username</th>
-                                <th width="25%">Email</th>
-                                <th width="12%">Phone No.</th>
-                                <th width="5%">Role</th>
-                                <th width="10%">Status</th>
-                                <th class="notexport" width="15%">Action</th>
-                            </tr>
-                            </tfoot>
+
                         </table>
                     </div>
                     </div>

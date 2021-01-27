@@ -142,22 +142,7 @@
                                                 </tr>
                                             @endforeach
                                         </tbody>
-                                        <tfoot>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Student Name</th>
-                                            <th>Regi No.</th>
-                                            <th>Roll No.</th>
-                                            @foreach($marksDistributions as $distribution)
-                                                <th>{{AppHelper::MARKS_DISTRIBUTION_TYPES[$distribution->type]}}</th>
-                                            @endforeach
-                                            <th>Total Marks</th>
-                                            <th>Grade</th>
-                                            <th>Point</th>
-                                            <th>Status</th>
-                                            <th class="notexport" width="5%">Action</th>
-                                        </tr>
-                                        </tfoot>
+
                                     </table>
                                 </div>
                             </div>

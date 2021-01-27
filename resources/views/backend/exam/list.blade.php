@@ -44,9 +44,9 @@
                                     <th width="5%">#</th>
                                     <th width="10%">Class</th>
                                     <th width="20%">Name</th>
-                                    <th width="10%">Elective Subject Point Above Addition</th>
-                                    <th width="30%">Marks Distribution Types</th>
-                                    <th width="5%">Open For Marks Entry</th>
+                                    <th width="25%">Elective Subject Point Above Addition</th>
+                                    <th width="15%">Marks Distribution Types</th>
+                                    <th width="15%">Open For Marks Entry</th>
                                     <th width="10%">Status</th>
                                     <th class="notexport" width="10%">Action</th>
                                 </tr>
@@ -96,18 +96,7 @@
                                 @endforeach
 
                                 </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th width="5%">#</th>
-                                    <th width="10%">Class</th>
-                                    <th width="20%">Name</th>
-                                    <th width="10%">Elective Subject Point Above Addition</th>
-                                    <th width="30%">Marks Distribution Types</th>
-                                    <th width="5%">Open For Marks Entry</th>
-                                    <th width="10%">Status</th>
-                                    <th class="notexport" width="10%">Action</th>
-                                </tr>
-                                </tfoot>
+
                             </table>
                         </div>
                     </div>

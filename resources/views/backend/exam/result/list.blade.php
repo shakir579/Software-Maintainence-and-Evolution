@@ -124,21 +124,7 @@
                                                 </tr>
                                             @endforeach
                                             </tbody>
-                                            <tfoot>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Student Name</th>
-                                                <th>Regi No.</th>
-                                                <th>Roll No.</th>
-                                                @if(!$section_id)
-                                                    <th>Section</th>
-                                                @endif
-                                                <th>Grade</th>
-                                                <th>Point</th>
-                                                <th>Total Marks</th>
-                                                <th class="notexport" width="5%">Action</th>
-                                            </tr>
-                                            </tfoot>
+                   
                                         </table>
                                     </div>
                                 </div>
