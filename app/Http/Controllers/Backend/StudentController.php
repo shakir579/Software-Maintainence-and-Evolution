@@ -110,7 +110,7 @@ class StudentController extends Controller
         $gender = 0;
         $religion = 0;
         $bloodGroup = 0;
-        $nationality = 'Bangladeshi';
+        $nationality = 'Malaysia';
         $group = 'None';
         $shift = 'Day';
         $regiInfo = null;
@@ -556,7 +556,7 @@ class StudentController extends Controller
         $gender = $student->getOriginal('gender');
         $religion = $student->getOriginal('religion');
         $bloodGroup = $student->getOriginal('blood_group');
-        $nationality = ($student->nationality != "Bangladeshi") ? "Other" : "";
+        $nationality = ($student->nationality != "Malaysia") ? "Other" : "";
         $shift = $regiInfo->shift;
         $section = $regiInfo->section_id;
         $iclass = $regiInfo->class_id;
