@@ -131,19 +131,7 @@
                                 @endforeach
 
                                 </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th width="5%">#</th>
-                                    <th width="10%">Subject</th>
-                                    <th width="10%">Grade</th>
-                                    <th width="10%">Combine Subject</th>
-                                    <th width="30%">Marks Distribution</th>
-                                    <th width="10%">Passing Rule</th>
-                                    <th width="5%">Total Marks</th>
-                                    <th width="5%">Pass Marks</th>
-                                    <th class="notexport" width="10%">Action</th>
-                                </tr>
-                                </tfoot>
+
                             </table>
                         </div>
                     </div>

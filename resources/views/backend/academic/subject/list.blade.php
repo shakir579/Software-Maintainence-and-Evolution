@@ -102,22 +102,7 @@
                             @endforeach
 
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <th width="5%">#</th>
-                                <th width="15%">Name</th>
-                                <th width="10%">Code</th>
-                                <th width="5%">Type</th>
-                                <th width="15%">Class</th>
-                                <th width="20%">Teacher</th>
-                                <th width="5%">Order</th>
-                                @notrole('Student')
-                                <th width="5%" title="Exclude In Result">EIR</th>
-                                <th width="10%">Status</th>
-                                <th class="notexport" width="10%">Action</th>
-                                @endnotrole
-                            </tr>
-                            </tfoot>
+
                         </table>
                     </div>
                     </div>

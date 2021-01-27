@@ -112,14 +112,7 @@
                                 @endforeach
 
                                 </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th width="5%">#</th>
-                                    <th width="20%">Name</th>
-                                    <th width="65%">Rules</th>
-                                    <th class="notexport" width="10%">Action</th>
-                                </tr>
-                                </tfoot>
+
                             </table>
                         </div>
                     </div>

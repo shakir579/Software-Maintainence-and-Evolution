@@ -95,18 +95,7 @@
                                 @endforeach
 
                                 </tbody>
-                                <tfoot>
-                                <tr>
-                                    <th width="5%">#</th>
-                                    <th width="20%">Name</th>
-                                    <th width="10%">Regi. No.</th>
-                                    <th width="10%">Roll No.</th>
-                                    <th width="15%">In Time</th>
-                                    <th width="15%">Out Time</th>
-                                    <th width="5%">Staying Hours</th>
-                                    <th width="20%">Status</th>
-                                </tr>
-                                </tfoot>
+
                             </table>
                         </div>
                     </div>

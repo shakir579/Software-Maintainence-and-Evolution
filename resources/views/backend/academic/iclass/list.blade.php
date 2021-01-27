@@ -105,22 +105,7 @@
                             @endforeach
 
                             </tbody>
-                            <tfoot>
-                            <tr>
-                                <th width="5%">#</th>
-                                <th width="25%">Name</th>
-                                <th width="5%">Numeric Value</th>
-                                <th width="8%">Order</th>
-                                <th width="7%">Group</th>
-                                <th width="5%">Duration</th>
-                                <th width="5%">Have Selective</th>
-                                <th width="5%">Max Selective</th>
-                                <th width="5%">Have Elective</th>
-                                <th width="10%">Note</th>
-                                <th width="10%">Status</th>
-                                <th class="notexport" width="10%">Action</th>
-                            </tr>
-                            </tfoot>
+
                         </table>
                     </div>
                     </div>
